@@ -12,8 +12,10 @@ function setup() {
 }
 
 function draw() {
- colorMode (HSB,360,100, map(mouseY, 0, windowHeight, 50, 100));
- background(map(mouseX, 0, windowWidth, 0, 359),100,100);
+   colorMode(HSB, 360, 100, 100, 100);
+
+  let s = map(mouseY, 0, windowHeight, 0, 100);
+  background(map(mouseX, 0, windowWidth, 0, 359), s, 100);
  x = lerp(x, mouseX, 0.1);
  y = lerp(y, mouseY, 0.1)
  fill("white");
